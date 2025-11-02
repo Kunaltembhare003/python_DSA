@@ -20,3 +20,5 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 site_name: Python-DSA
 nav:
   - Home: index.md
+  - Python: python.md
+  - Interview: python_interview
