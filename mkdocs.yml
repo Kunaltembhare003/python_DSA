@@ -29,8 +29,9 @@ theme:
 nav:
   - Home: index.md
   - Python Basics:
-    - Data Structures: python_basics/data_structures.md
-    - Sets and Dictionaries: sets_and_dict.md
+    - Sets and Dict: python_basics/sets_and_dict.md
+  - interview:
+    - python interview Q&A: interview/python_interview.md
 
 markdown_extensions:
   - pymdownx.highlight:
