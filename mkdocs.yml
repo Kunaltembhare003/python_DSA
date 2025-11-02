@@ -8,12 +8,11 @@ theme:
     - navigation.top
     - search.suggest
     - search.highlight
-    - content.tabs.link
-    - content.code.annotation
+    - content.tabs.link 
     - content.code.copy
   language: en
   palette:
-    - scheme: default
+    - scheme: slate
       toggle:
         icon: material/toggle-switch-off-outline 
         name: Switch to dark mode
@@ -29,9 +28,13 @@ theme:
 nav:
   - Home: index.md
   - Python Basics:
-    - Sets and Dict: python_basics/sets_and_dict.md
+    - Sets: python_basics/sets.md
+    - Dictionaries: python_basics/dict.md
   - interview:
     - python interview Q&A: interview/python_interview.md
+    - ML interview Q&A: interview/ML_interview.md
+    - NLP interview Q&A: interview/NLP_interview.md
+    - Gen AI interview Q&A: interview/gen_ai_interview.md
 
 markdown_extensions:
   - pymdownx.highlight:
