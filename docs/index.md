@@ -16,9 +16,3 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
 
-
-site_name: Python-DSA
-nav:
-  - Home: index.md
-  - Python: python.md
-  - Interview: python_interview
