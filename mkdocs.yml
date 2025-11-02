@@ -35,6 +35,7 @@ nav:
     - ML interview Q&A: interview/ML_interview.md
     - NLP interview Q&A: interview/NLP_interview.md
     - Gen AI interview Q&A: interview/gen_ai_interview.md
+    - RAG interview Q&A: interview/Gen_AI_RAG.md
 
 markdown_extensions:
   - pymdownx.highlight:

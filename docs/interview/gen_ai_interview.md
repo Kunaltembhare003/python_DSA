@@ -1,10 +1,10 @@
-# Common Generative AI Interview Questions
+# Questions
 
-Owner: Aishwarya Nr
 
 ## Generative Models
 
 1. **What is the difference between generative and discriminative models?**
+
 - Answer:
     - Generative models, such as Variational Autoencoders (VAEs) and Generative Adversarial Networks (GANs), are designed to generate new data samples by understanding and capturing the underlying data distribution. Discriminative models, on the other hand, focus on distinguishing between different classes or categories within the data.
         
@@ -16,6 +16,7 @@ Owner: Aishwarya Nr
 ---
 
 2. **Describe the architecture of a Generative Adversarial Network and how the generator and discriminator interact during training.**
+
 - Answer:
     
     A Generative Adversarial Network comprises a generator and a discriminator. The generator produces synthetic data, attempting to mimic real data, while the discriminator evaluates the authenticity of the generated samples. During training, the generator and discriminator engage in a dynamic interplay, each striving to outperform the other. The generator aims to create more realistic data, and the discriminator seeks to improve its ability to differentiate between real and generated samples.

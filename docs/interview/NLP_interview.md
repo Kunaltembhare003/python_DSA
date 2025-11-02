@@ -1,7 +1,4 @@
- collection of technical interview questions for machine learning and natural language processing positions.
-
-The answer to all of these question were generated using ChatGPT!
-
+## Questions
 
 ### 1. What is the difference between stemming and lemmatization? [[src]](https://www.projectpro.io/article/nlp-interview-questions-and-answers/439)
 
