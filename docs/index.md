@@ -1,18 +1,47 @@
-# Welcome to MkDocs
+# Python Data Structures and Algorithms
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Welcome to the Python DSA documentation! This comprehensive guide covers Python data structures, algorithms, and interview preparation materials.
 
-## Commands
+## Contents
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+### Python Basics
+- **Data Structures**
+  - Sets and Dictionaries
+  - Common operations and use cases
+  - Performance characteristics
 
-## Project layout
+### Interview Preparation
+- Python Interview Questions & Answers
+- Common coding patterns
+- Best practices
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## Getting Started
+
+Browse through the topics using the navigation menu on the left. Each section includes:
+- Detailed explanations
+- Code examples
+- Common use cases
+- Performance characteristics
+
+## Contributing
+
+Feel free to contribute to this documentation by:
+1. Fork the [repository](https://github.com/Kunaltembhare003/python_DSA)
+2. Make your changes
+3. Submit a pull request
+
+## Local Development
+
+To work on this documentation locally:
+
+```bash
+# Install MkDocs Material theme
+pip install mkdocs-material
+
+# Start local server
+mkdocs serve
+
+# Build documentation
+mkdocs build
+```
 
