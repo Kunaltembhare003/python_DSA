@@ -30,6 +30,7 @@ nav:
   - Python Basics:
     - Sets: python_basics/sets.md
     - Dictionaries: python_basics/dict.md
+    - Functions: python_basics/functions.md
   - interview:
     - python interview Q&A: interview/python_interview.md
     - ML interview Q&A: interview/ML_interview.md
