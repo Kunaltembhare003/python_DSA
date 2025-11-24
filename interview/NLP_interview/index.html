@@ -1,0 +1,1112 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../ML_interview/">
+      
+      
+        <link rel="next" href="../gen_ai_interview/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>NLP interview Q&A - Python DSA Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#questions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Python DSA Documentation" class="md-header__button md-logo" aria-label="Python DSA Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python DSA Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              NLP interview Q&A
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Kunaltembhare003/python_DSA" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Kunaltembhare003/python_DSA
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../python_basics/sets/" class="md-tabs__link">
+          
+  
+  
+  Python Basics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../python_interview/" class="md-tabs__link">
+          
+  
+  
+  interview
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Python DSA Documentation" class="md-nav__button md-logo" aria-label="Python DSA Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Python DSA Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Kunaltembhare003/python_DSA" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Kunaltembhare003/python_DSA
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python Basics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Python Basics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_basics/sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_basics/dict/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dictionaries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python_basics/functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    interview
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    interview
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python_interview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    python interview Q&A
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ML_interview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ML interview Q&A
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NLP interview Q&A
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NLP interview Q&A
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Questions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-what-is-the-difference-between-stemming-and-lemmatization-src" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. What is the difference between stemming and lemmatization? [src]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-what-do-you-know-about-latent-semantic-indexing-lsi-src" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. What do you know about Latent Semantic Indexing (LSI)? [src]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-what-do-you-know-about-dependency-parsing-src" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. What do you know about Dependency Parsing? [src]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-name-different-approaches-for-text-summarization-src" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Name different approaches for text summarization. [src]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-what-approach-would-you-use-for-part-of-speech-tagging-src" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. What approach would you use for part of speech tagging? [src]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-explain-what-is-a-n-gram-model-src" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Explain what is a n-gram model. [src]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-explain-how-tf-idf-measures-word-importance-src" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Explain how TF-IDF measures word importance. [src]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-what-is-perplexity-used-for-src" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. What is perplexity used for? [src]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-what-is-bag-of-worrds-model-src" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. What is Bag-of-Worrds model? [src]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-explain-how-the-markov-assumption-affects-the-bi-gram-model-src" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Explain how the Markov assumption affects the bi-gram model? [src]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-what-are-the-most-common-word-embedding-methods-explain-each-briefly-src" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. What are the most common word embedding methods? explain each briefly. [src]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-what-are-the-first-few-steps-that-you-will-take-before-applying-an-nlp-algorithm-to-a-given-corpus-src" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. What are the first few steps that you will take before applying an NLP algorithm to a given corpus? [src]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-list-a-few-types-of-linguistic-ambiguities-src" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. List a few types of linguistic ambiguities. [src]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gen_ai_interview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gen AI interview Q&A
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gen_AI_RAG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RAG interview Q&A
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data_manipulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Manipulation Q&A
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>NLP interview Q&A</h1>
+
+<h2 id="questions">Questions</h2>
+<h3 id="1-what-is-the-difference-between-stemming-and-lemmatization-src">1. What is the difference between stemming and lemmatization? <a href="https://www.projectpro.io/article/nlp-interview-questions-and-answers/439">[src]</a></h3>
+<p>Stemming and lemmatization are both techniques used in natural language processing to reduce words to their base form. The main difference between the two is that stemming is a crude heuristic process that chops off the ends of words, while lemmatization is a more sophisticated process that uses vocabulary and morphological analysis to determine the base form of a word. Lemmatization is more accurate but also more computationally expensive.</p>
+<p>Example: The word "better"
+* Stemming: The stem of the word "better" is likely to be "better" (e.g. by using Porter stemmer)
+* Lemmatization: The base form of the word "better" is "good" (e.g. by using WordNetLemmatizer with POS tagger)</p>
+<h3 id="2-what-do-you-know-about-latent-semantic-indexing-lsi-src">2. What do you know about Latent Semantic Indexing (LSI)? <a href="https://www.projectpro.io/article/nlp-interview-questions-and-answers/439">[src]</a></h3>
+<p>Latent Semantic Indexing (LSI) is a technique used in NLP and information retrieval to extract the underlying meaning or concepts from a collection of text documents. LSI uses mathematical techniques such as Singular Value Decomposition (SVD) to identify patterns and relationships in the co-occurrence of words within a corpus of text. LSI is based on the idea that words that are used in similar context tend to have similar meanings. </p>
+<h3 id="3-what-do-you-know-about-dependency-parsing-src">3. What do you know about Dependency Parsing? <a href="https://www.projectpro.io/article/nlp-interview-questions-and-answers/439">[src]</a></h3>
+<p>Dependency parsing is a technique used in natural language processing to analyze the grammatical structure of a sentence, and to identify the relationships between its words. It is used to build a directed graph where words are represented as nodes, and grammatical relationships between words are represented as edges. Each node has one parent and can have multiple children, representing the grammatical relations between the words.</p>
+<p>There are different algorithms for dependency parsing, such as the Earley parser, the CYK parser, and the shift-reduce parser. </p>
+<h3 id="4-name-different-approaches-for-text-summarization-src">4. Name different approaches for text summarization. <a href="https://www.projectpro.io/article/nlp-interview-questions-and-answers/439">[src]</a></h3>
+<p>There are several different approaches to text summarization, including:
+* Extractive summarization: Selects the most important sentences or phrases from the original text.
+* Abstractive summarization: Generates new sentences that capture the key concepts and themes of the original text.
+* Latent Semantic Analysis (LSA) based summarization: Uses LSA to identify the key concepts in a text.
+* Latent Dirichlet Allocation (LDA) based summarization: Uses LDA to identify the topics in a text.
+* Neural-based summarization: Uses deep neural networks to generate a summary.</p>
+<p>Each approach has its own strengths and weaknesses and the choice of the approach will depend on the specific use case and the quality of the summary desired.</p>
+<h3 id="5-what-approach-would-you-use-for-part-of-speech-tagging-src">5. What approach would you use for part of speech tagging? <a href="https://www.projectpro.io/article/nlp-interview-questions-and-answers/439">[src]</a></h3>
+<p>There are a few different approaches that can be used for part-of-speech (POS) tagging, such as:
+* Rule-based tagging: using pre-defined rules to tag text
+* Statistical tagging: using statistical models to tag text
+* Hybrid tagging: Combining rule-based and statistical methods
+* Neural-based tagging: using deep neural networks to tag text</p>
+<h3 id="6-explain-what-is-a-n-gram-model-src">6. Explain what is a n-gram model. <a href="https://www.projectpro.io/article/nlp-interview-questions-and-answers/439">[src]</a></h3>
+<p>An n-gram model is a type of statistical language model used in NLP. It is based on the idea that the probability of a word in a sentence is dependent on the probability of the n-1 preceding words, where n is the number of words in the gram.</p>
+<p>The model represents the text as a sequence of n-grams, where each n-gram is a sequence of n words. The model uses the frequency of each n-gram in a large corpus of text to estimate the probability of each word in a sentence, based on the n-1 preceding words.</p>
+<h3 id="7-explain-how-tf-idf-measures-word-importance-src">7. Explain how TF-IDF measures word importance. <a href="https://www.projectpro.io/article/nlp-interview-questions-and-answers/439">[src]</a></h3>
+<p>TF-IDF (Term Frequency-Inverse Document Frequency) is a statistical measure used to evaluate the importance of a word in a document or collection of documents. It is calculated as the product of the term frequency (TF) and the inverse document frequency (IDF) of a word.</p>
+<p>The term frequency (TF) of a word is the number of times the word appears in a document, normalized by the total number of words in the document.</p>
+<p>The inverse document frequency (IDF) of a word is the logarithm of the total number of documents in the corpus divided by the number of documents in which the word appears.</p>
+<h3 id="8-what-is-perplexity-used-for-src">8. What is perplexity used for? <a href="https://www.projectpro.io/article/nlp-interview-questions-and-answers/439">[src]</a></h3>
+<p>Perplexity is a statistical measure used to evaluate the quality of a probability model, particularly language models. It is used to quantify the uncertainty of a model when predicting the next word in a sequence of words. The lower the perplexity, the better the model is at predicting the sequence of words. </p>
+<p>Sure, here's the formula for perplexity in LaTeX format:</p>
+<p>Perplexity = <span class="arithmatex">\(2^{H(D)}\)</span></p>
+<p><span class="arithmatex">\(H(D) = - {\sum}_{i=1}^{N} {P(w_i)log_2{ P(w_i) }}\)</span> <a href="https://en.wikipedia.org/wiki/Perplexity">ref</a> </p>
+<p><span class="arithmatex">\(w_i\)</span> = the i-th word in the sequence</p>
+<p><span class="arithmatex">\(N\)</span> = the number of words in the sequence</p>
+<p><span class="arithmatex">\(P(w_i)\)</span> = the probability of the i-th word according to the model</p>
+<h3 id="9-what-is-bag-of-worrds-model-src">9. What is Bag-of-Worrds model? <a href="https://www.projectpro.io/article/nlp-interview-questions-and-answers/439">[src]</a></h3>
+<p>The bag-of-words model is a representation of text data where a text is represented as a bag (multiset) of its words, disregarding grammar and word order but keeping track of the frequency of each word. It is simple to implement and computationally efficient, but it discards grammatical information and word order, which can be important for some NLP tasks.</p>
+<h3 id="10-explain-how-the-markov-assumption-affects-the-bi-gram-model-src">10. Explain how the Markov assumption affects the bi-gram model? <a href="https://www.projectpro.io/article/nlp-interview-questions-and-answers/439">[src]</a></h3>
+<p>The Markov assumption is an important concept in the bi-gram model, it states that the probability of a word in a sentence depends only on the preceding word. The Markov assumption simplifies the bi-gram model by reducing the number of variables that need to be considered, making the model computationally efficient, but it also limits the context that the model takes into account, which can lead to errors in the probability estimates. In practice, increasing the order of the n-gram model can be used to increase the context taken into account, thus increasing the model's accuracy.</p>
+<h3 id="11-what-are-the-most-common-word-embedding-methods-explain-each-briefly-src">11. What are the most common word embedding methods? explain each briefly. <a href="https://www.projectpro.io/article/nlp-interview-questions-and-answers/439">[src]</a></h3>
+<p>Common word embedding methods include:
+* Count-based methods: Create embeddings by counting the co-occurrence of words in a corpus. Example: Latent Semantic Analysis (LSA)
+* Prediction-based methods: Create embeddings by training a model to predict a target word based on its surrounding context. Example: Continuous Bag-of-Words (CBOW) and Word2Vec
+* Hybrid methods: Combine both co-occurrence and context to generate embeddings. Example: GloVe (Global Vectors for Word Representation)
+* Neural Language Model based methods: Create embeddings by training a neural network-based language model on a large corpus of text. Example: BERT (Bidirectional Encoder Representations from Transformers)</p>
+<h3 id="12-what-are-the-first-few-steps-that-you-will-take-before-applying-an-nlp-algorithm-to-a-given-corpus-src">12. What are the first few steps that you will take before applying an NLP algorithm to a given corpus? <a href="https://www.projectpro.io/article/nlp-interview-questions-and-answers/439">[src]</a></h3>
+<ul>
+<li>
+<p>Text pre-processing: Clean and transform the text into a format that can be processed by the model. Specific methods include: Removing special characters, lowercasing, removing stop words.</p>
+</li>
+<li>
+<p>Tokenization: Break the text into individual words or phrases that can be used as input. Specific methods include: word tokenization, sentence tokenization, and n-gram tokenization.</p>
+</li>
+<li>
+<p>Text normalization: Transform the text into a consistent format. Specific methods include: stemming, lemmatization.</p>
+</li>
+<li>
+<p>Feature extraction: Select relevant features from the text to be used as input. Specific methods include: creating a vocabulary of the most common words in the corpus, creating a term-document matrix.</p>
+</li>
+<li>
+<p>Splitting the data: Divide the data into training, validation and testing sets.</p>
+</li>
+<li>
+<p>Annotating the data: Manually tag the data with relevant information. Specific methods include: POS tagging, NER tagging, and so on.</p>
+</li>
+</ul>
+<h3 id="13-list-a-few-types-of-linguistic-ambiguities-src">13. List a few types of linguistic ambiguities. <a href="https://www.projectpro.io/article/nlp-interview-questions-and-answers/439">[src]</a></h3>
+<ul>
+<li>
+<p>Lexical ambiguity: A word has multiple meanings. Example: "bass" can refer to a type of fish or a low-frequency sound.</p>
+</li>
+<li>
+<p>Syntactic ambiguity: A sentence can be parsed in more than one way. Example: "I saw the man with the telescope" can mean that the speaker saw a man who had a telescope or the speaker saw a man through a telescope.</p>
+</li>
+<li>
+<p>Semantic ambiguity: A word or phrase can have more than one meaning in a given context. Example: "bank" can refer to a financial institution or the edge of a river.</p>
+</li>
+<li>
+<p>Pragmatic ambiguity: A sentence can have different interpretations depending on the speaker's intended meaning. Example: "I'm fine" can mean that the speaker is feeling well or that the speaker does not want to talk about their feelings.</p>
+</li>
+<li>
+<p>Anaphora resolution: A pronoun or noun phrase refers to an antecedent with multiple possible referents.</p>
+</li>
+<li>
+<p>Homonymy: Words that are written and pronounced the same but have different meanings. Example: "bass" as a type of fish and a low-frequency sound</p>
+</li>
+<li>
+<p>Polysemy: words that have multiple meanings but are related in some way. Example: "bass" as a low-frequency sound and the bass guitar.</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
